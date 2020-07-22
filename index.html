@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hallo World</title>
+</head>
+
+<style>
+	* {
+		box-sizing: border-box;
+	}
+	body {
+		font-family: Montserrat;
+	}
+
+	.darkmode {
+		background-color: #3c3c3d;
+		color: white;
+	}
+	.header	{
+		background-color: #f5f5ff;
+		padding: 70px;
+		text-align: center;
+	}
+	.navbar {
+		background-color: #f5f5ff;
+		display: flex;
+	}
+
+	.navbar a {
+		color: black;
+		padding: 10px;
+		text-align: center;
+	}
+	/*hover (change color)*/
+	.navbar a:hover {
+		background-color: #ddd;
+		color: white;
+	}
+
+	.side {
+		background-color: #f5f5ff;
+		padding: 20px;
+		
+		flex: 30%;
+		text-align: right;
+	}
+
+	.main {
+		background-color: #f5f5ff;
+		padding: 20px;
+		
+		flex: 70%;
+	}
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.footer {
+		padding: 40px;
+		text-align: center;
+		background: #f5f5ff;
+	}
+
+	.col {
+		flex: 30%;
+		
+		text-align: center;
+		padding: 30px
+	}
+	.hobi {
+		padding: 30px;
+		background-color: #f5f5ff;
+		text-align: center;
+	}
+
+	.skill {
+		padding: 30px;
+		background-color: #f5f5ff;
+		text-align: center;
+	}
+
+	.experience {
+		padding: 30px;
+		background-color: #f5f5ff;
+		text-align: center;
+	}
+
+	@media screen and (max-width: 500px){
+	.row, .navbar {
+		flex-direction: column;
+	}
+}
+
+
+</style>
+
+<body>
+	<div class="header">
+		<h1>Welcome to <b>My Website</b></h1>
+	</div>
+	
+	<div class="row">
+		<div class="side">
+			<h3>My Profile</h3>
+			<p>Photo of me</p>
+			<img src="businesswoman2.png" style="width: 150px">
+			<h4>some text about me...</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+		</div>
+		<div class="main">
+			<div class="navbar">
+		<a href="#">Profile</a>
+		<a href="#">Hobbi</a>
+		<a href="#">Skill</a>
+		<a href="#">Experience</a>
+		<button onclick="dark()">Dark Mode</button>
+	</div>
+			<h3>Description About me</h3>
+			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+		</div>
+	</div>
+	<div class="hobi">
+		<h3>Hobbi</h3>
+		<div class="row">
+			<div class="col">
+				<h2>Lorem Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div class="col">
+				<h2>Lorem Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div class="col">
+				<h2>Lorem Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="skill">
+		<h3>Skill</h3>
+		<div class="row">
+			<div class="col">
+				<h2>Lorem Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div class="col">
+				<h2>Lorem Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="experience">
+		<h3>Experience</h3>
+		<div class="row">
+			<div class="col">
+				<h2>Lorem Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div class="col">
+				<h2>Lorem Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div class="col">
+				<h2>Lorem Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<h3>footer</h3>
+	</div>
+
+	<script>
+		function dark(){
+			var element = document.body;
+			element.classlight.toggle("darkmode");
+		}
+	</script>
+</body>
+</html>
