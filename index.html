@@ -9,7 +9,7 @@
     }
     
     body {
-        font-family: Montserrat;
+        font-family: Calibri;
 		background-color: #edeef5;
     }
 
@@ -20,8 +20,13 @@
 		}
 
     header {
-        padding: 60px;
+        padding: 70px;
+        font-family: Montserrat;
         text-align: center;
+        font-size: 30px;
+        /* background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover; */
     }
 
     side {    
@@ -39,6 +44,14 @@
 
     .navbar {
         display: flex;
+        overflow: hidden;
+        background-color:#edeef5;
+        position: fixed;
+        top: 0;
+        padding: 15px;
+        width: 100%;
+        justify-content: space-evenly;
+        
     }
 
     .navbar a {
@@ -52,9 +65,21 @@
         color: white;
     }
 
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 40%;
+        padding: 16px;
+        }
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
     footer {
         padding: 30px;
         text-align: center;
+        font-size:15px ;
     }
 
 
@@ -70,9 +95,7 @@
         margin: 10px;
         text-align: center;
         line-height: 30px;
-        font-size: 15px;
-        border: 0.2px solid #4991fc;
-		
+        font-size: 15px;		
     }
 
     .hobby, .skill, .experience {
@@ -94,40 +117,49 @@
 	h3, h1 {
 		color: #4991fc;
 	}
-
-
+    a {
+        font-family: Montserrat;
+        text-decoration: none;
+    }
+    li {
+        text-align:left;
+    }
 
 </style>
 <body>
+
+    <div class="navbar">
+        <a href="#">PROFILE</a>
+        <a href="#hobby">HOBBY</a>
+        <a href="#skill">SKILL</a>
+        <a href="#experience">EXPERIENCE</a>
+        <button onclick="dark()">Dark Mode</button>
+    </div>
 	<header>
-		<h1>Welcome to <b>My Website</b></h1>
-	</header>
+		<h1>Welcome to My Website</b></h1>
+    </header>
+    
+
 	
 	<div class="flex-container">
 		<side>
 			<h3>My Profile</h3>
-			<img src="pp.jpg" style="width: 150px">
-			<p>mmayer@yahoo-inc.com  <img src="at.png" class="icon2"></p>
-			<p>http://marissamayr.tumblr.com  <img src="link.png" class="icon2"></p>
-			<p>Sunnyvale,CA  <img src="pin.png" class="icon2"></p>			
+			<img src="image/profile.jpg" style="width: 150px">
+			<p>mmayer@yahoo-inc.com  <img src="image/at.png" class="icon2"></p>
+			<p>http://marissamayr.tumblr.com  <img src="image/link.png" class="icon2"></p>
+			<p>Sunnyvale,CA  <img src="image/pin.png" class="icon2"></p>			
 		
 		</side>
 		<main>
-			<div class="navbar">
-				<a href="#">Profile</a>
-				<a href="#hobby">Hobbi</a>
-				<a href="#skill">Skill</a>
-				<a href="#experience">Experience</a>
-				<button onclick="dark()">Dark Mode</button>
-			</div>
+			
 			<h3>Life Philosophy</h3>
 			<p><i>"If you don't have any shadows, you're not standing in the light</i></p>
 		</main>
 	</div>
 	<!-- end row -->
 
-	<div class="hobby">
-		<h1>Hobbi</h1>
+	<!-- <section class="hobby" id="hobby">
+		<h1>Hobby</h1>
 		<div class="flex-container">
 			<div>
 				<h2>Lorem Ipsum</h2>
@@ -142,68 +174,80 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
 		</div>
-	</div>
+	</section> -->
 
-	<div class="skill">
-		<h1>Skill</h1>
+	<section class="skill" id="skill">
+		<h1>Experties & Skill</h1>
 		<div class="flex-container">
-			<div>
-				<h2>Lorem Ipsum</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<div class="card">
+				<h2>Languages</h2>
+				<ul>
+                    <li>English</li>
+                    <li>Spanish</li>
+                    <li>German</li>
+                </ul>
 			</div>
-			<div>
-				<h2>Lorem Ipsum</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<div class="card">
+				<h2>Strengths</h2>
+				<ul>
+                    <li>Hardworking</li>
+                    <li>Persuasive</li>
+                    <li>Motivator & Leader</li>
+                    <li>User Experience</li>
+                    <li>Mobile Devices & Applications</li>
+                    <li>Product Management & Marketing</li>
+                </ul>
 			</div>
 		</div>
-	</div>
+	</section>
 
-	<div class="experience">
+	<section class="experience" id="experience">
 		<h1>Experience</h1>
 		<div class="flex-container">
-            <div>
+            <div class="card">
                 <h2>President & CEO</h2>
                 <h4>Yahoo!</h4>
-                    <p><img src="calendar.png" class="icon2">July 2012 - Ongoing</p>
-                    <p><img src="pin.png" class="icon2">Sunnyvale, CA</p>
+                    <p><img src="image/calendar.png" class="icon2">   July 2012 - Ongoing</p>
+                    <p><img src="image/pin.png" class="icon2">   Sunnyvale, CA</p>
             </div>
-            <div>
+            <div class="card">
             <h2>Vice President of Location & Local Service</h2>
                 <h4>Google</h4>
-                    <p><img src="calendar.png" class="icon2">Oct 2010 - July 2012</p>
-                    <p><img src="pin.png" class="icon2">Palo Alto, CA</p>
+                    <p><img src="image/calendar.png" class="icon2">   Oct 2010 - July 2012</p>
+                    <p><img src="image/pin.png" class="icon2">   Palo Alto, CA</p>
             </div>
-            <div>
+            <div class="card">
                 <h2>Vice President of Search Products & UX</h2>
                 <h4>Google</h4>
-                    <p><img src="calendar.png" class="icon2">2005 - 2010</p>
-                    <p><img src="pin.png" class="icon2">Palo Alto, CA</p>
+                    <p><img src="image/calendar.png" class="icon2">   2005 - 2010</p>
+                    <p><img src="image/pin.png" class="icon2">   Palo Alto, CA</p>
             </div>
         </div>
         <div class="flex-container">
-            <div>
+            <div class="card">
                 <h2>Product Manager & Technical UI Lead</h2>
                 <h4>Google</h4>
-                    <p><img src="calendar.png" class="icon2">Oct 2001 - July 2005</p>
-                    <p><img src="pin.png" class="icon2">Sunnyvale, CA</p>	
+                    <p><img src="image/calendar.png" class="icon2">   Oct 2001 - July 2005</p>
+                    <p><img src="image/pin.png" class="icon2">   Sunnyvale, CA</p>	
             </div>
-            <div>
+            <div class="card"> 
                 <h2>Product Engineer</h2>
                 <h4>Google</h4>
-                    <p><img src="calendar.png" class="icon2">June 1999 - 2001</p>
-                    <p><img src="pin.png" class="icon2">Palo Alto, CA</p>
+                    <p><img src="image/calendar.png" class="icon2">   June 1999 - 2001</p>
+                    <p><img src="image/pin.png" class="icon2">   Palo Alto, CA</p>
             </div>
         </div>
-	</div>
+	</section>
 
 	<footer>
-		<copyright>copyright 2020</copyright>
+		<p><img src="image/copyright.png" class="icon"></p>
 		<br/>
-		<br/>
-		<a href="www.twitter.com"><img src="twitter.png" class="icon"></a>
-		<a href="www.facebook.com"><img src="facebook.png" class="icon"></a>
-		<a href="www.linkedin.com"><img src="linkedin.png" class="icon"></a>
-		<a href="www.instagram.com"><img src="instagram.png" class="icon"></a>
+        <br/>
+        <p>contact me on :</p>
+		<a href="www.twitter.com">  <img src="image/twitter.png" class="icon"></a>
+		<a href="www.facebook.com">  <img src="image/facebook.png" class="icon"></a>
+		<a href="www.linkedin.com">  <img src="image/linkedin.png" class="icon"></a>
+		<a href="www.instagram.com">  <img src="image/instagram.png" class="icon"></a>
 	</footer>
 
 	<!-- dark mode -->
