@@ -18,14 +18,13 @@
 		background-color: #222330;
 		color: #efeef5;
 		}
+
     header {
-        
         padding: 60px;
         text-align: center;
-        }
+    }
 
-    side {
-        
+    side {    
         padding: 20px;
         flex: 30%;
         text-align: right;
@@ -43,7 +42,7 @@
     }
 
     .navbar a {
-        color: black;
+        color: #4991fc;
         padding: 10px;
         text-align: center;
     }
@@ -62,6 +61,7 @@
     .flex-container {
         display: flex;
         justify-content: center;
+		margin-bottom:100px;
     }
 
     .flex-container > div {
@@ -71,39 +71,29 @@
         text-align: center;
         line-height: 30px;
         font-size: 15px;
-        border: 0.2px solid #aaa;
+        border: 0.2px solid #4991fc;
+		
     }
 
-    .hobby {
-        
+    .hobby, .skill, .experience {
         text-align: center;
-        
-    }
-    .col {
-		flex: 30%;
-		text-align: center;
-		padding: 30px
-	}
-
-    .skill {
-        
-        text-align: center;
-        
     }
 
-    .experience {
-        
-        text-align: center;
-        
-    }
 
+	/* icon */
     .icon2 {
         width: 10px;
+	
     }
-
     .icon {
         width: 20px;
+		margin: 10px;
     }
+
+	/* text */
+	h3, h1 {
+		color: #4991fc;
+	}
 
 
 
@@ -117,9 +107,9 @@
 		<side>
 			<h3>My Profile</h3>
 			<img src="pp.jpg" style="width: 150px">
-			<p><img src="at.png" class="icon2">mmayer@yahoo-inc.com</p>
-			<p><img src="link.png" class="icon2">http://marissamayr.tumblr.com</p>
-			<p><img src="pin.png" class="icon2">Sunnyvale,CA</p>			
+			<p>mmayer@yahoo-inc.com  <img src="at.png" class="icon2"></p>
+			<p>http://marissamayr.tumblr.com  <img src="link.png" class="icon2"></p>
+			<p>Sunnyvale,CA  <img src="pin.png" class="icon2"></p>			
 		
 		</side>
 		<main>
@@ -216,6 +206,7 @@
 		<a href="www.instagram.com"><img src="instagram.png" class="icon"></a>
 	</footer>
 
+	<!-- dark mode -->
 	<script>
 		function dark() {
 			var element = document.body;
