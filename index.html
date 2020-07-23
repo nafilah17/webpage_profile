@@ -3,151 +3,162 @@
 <head>
 	<title>Hallo World</title>
 </head>
-
 <style>
-	* {
-		box-sizing: border-box;
-	}
-	body {
-		font-family: Montserrat;
-	}
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Montserrat;
+    }
+    header {
+        background-color: #f5f5ff;
+        padding: 60px;
+        text-align: center;
+        }
 
-	.darkmode {
-		background-color: #3c3c3d;
-		color: white;
-	}
-	.header	{
-		background-color: #f5f5ff;
-		padding: 70px;
-		text-align: center;
-	}
-	.navbar {
-		background-color: #f5f5ff;
-		display: flex;
-	}
+    side {
+        background-color: #f5f5ff;
+        padding: 20px;
+        flex: 30%;
+        text-align: right;
+    }
 
-	.navbar a {
-		color: black;
-		padding: 10px;
-		text-align: center;
-	}
-	/*hover (change color)*/
-	.navbar a:hover {
-		background-color: #ddd;
-		color: white;
-	}
+    main {
+        background-color: #f5f5ff;
+        padding: 20px;
+        flex: 70%;
+        
+    }
 
-	.side {
-		background-color: #f5f5ff;
-		padding: 20px;
-		
+    .navbar {
+        background-color: #f5f5ff;
+        display: flex;
+        
+        
+    }
+
+    .navbar a {
+        color: black;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navbar a:hover {
+        background-color: #ddd;
+        color: white;
+    }
+
+    footer {
+        background-color: #f5f5ff;
+        padding: 30px;
+        text-align: center;
+        
+    }
+
+
+    .flex-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .flex-container > div {
+        background-color: #f5f5ff;
+        width: 350px;
+        margin: 10px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 15px;
+        border: 0.2px solid #aaa;
+    }
+
+    .hobby {
+        background-color: #f5f5ff;
+        text-align: center;
+        
+    }
+    .col {
 		flex: 30%;
-		text-align: right;
-	}
-
-	.main {
-		background-color: #f5f5ff;
-		padding: 20px;
-		
-		flex: 70%;
-	}
-
-	.row {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	.footer {
-		padding: 40px;
-		text-align: center;
-		background: #f5f5ff;
-	}
-
-	.col {
-		flex: 30%;
-		
 		text-align: center;
 		padding: 30px
 	}
-	.hobi {
-		padding: 30px;
-		background-color: #f5f5ff;
-		text-align: center;
-	}
 
-	.skill {
-		padding: 30px;
-		background-color: #f5f5ff;
-		text-align: center;
-	}
+    .skill {
+        background-color: #f5f5ff;
+        text-align: center;
+        
+    }
 
-	.experience {
-		padding: 30px;
-		background-color: #f5f5ff;
-		text-align: center;
-	}
+    .experience {
+        background-color: #f5f5ff;
+        text-align: center;
+        
+    }
 
-	@media screen and (max-width: 500px){
-	.row, .navbar {
-		flex-direction: column;
-	}
-}
+    .icon2 {
+        width: 10px;
+    }
+
+    .icon {
+        width: 20px;
+    }
+
 
 
 </style>
-
 <body>
-	<div class="header">
+	<header>
 		<h1>Welcome to <b>My Website</b></h1>
-	</div>
+	</header>
 	
-	<div class="row">
-		<div class="side">
+	<div class="flex-container">
+		<side>
 			<h3>My Profile</h3>
-			<p>Photo of me</p>
-			<img src="businesswoman2.png" style="width: 150px">
-			<h4>some text about me...</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-		</div>
-		<div class="main">
+			<img src="pp.jpg" style="width: 150px">
+			<p><img src="at.png" class="icon2">mmayer@yahoo-inc.com</p>
+			<p><img src="link.png" class="icon2">http://marissamayr.tumblr.com</p>
+			<p><img src="pin.png" class="icon2">Sunnyvale,CA</p>			
+		</side>
+		<main>
 			<div class="navbar">
-		<a href="#">Profile</a>
-		<a href="#">Hobbi</a>
-		<a href="#">Skill</a>
-		<a href="#">Experience</a>
-		<button onclick="dark()">Dark Mode</button>
+				<a href="#">Profile</a>
+				<a href="#hobby">Hobbi</a>
+				<a href="#skill">Skill</a>
+				<a href="#experience">Experience</a>
+				<button onclick="dark()">Dark Mode</button>
+			</div>
+			<h3>Life Philosophy</h3>
+			<p><i>"If you don't have any shadows, you're not standing in the light</i></p>
+		</main>
 	</div>
-			<h3>Description About me</h3>
-			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-		</div>
-	</div>
-	<div class="hobi">
-		<h3>Hobbi</h3>
-		<div class="row">
-			<div class="col">
-				<h2>Lorem Ipsum</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-			<div class="col">
-				<h2>Lorem Ipsum</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-			<div class="col">
-				<h2>Lorem Ipsum</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-		</div>
+	<!-- end row -->
 
+	<div class="hobby">
+		<h1>Hobbi</h1>
+		<div class="flex-container">
+			<div>
+				<h2>Lorem Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div>
+				<h2>Lorem Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div>
+				<h2>Lorem Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</div>
 	</div>
 
 	<div class="skill">
-		<h3>Skill</h3>
-		<div class="row">
-			<div class="col">
+		<h1>Skill</h1>
+		<div class="flex-container">
+			<div>
 				<h2>Lorem Ipsum</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
-			<div class="col">
+			<div>
 				<h2>Lorem Ipsum</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
@@ -155,26 +166,52 @@
 	</div>
 
 	<div class="experience">
-		<h3>Experience</h3>
-		<div class="row">
-			<div class="col">
-				<h2>Lorem Ipsum</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-			<div class="col">
-				<h2>Lorem Ipsum</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-			<div class="col">
-				<h2>Lorem Ipsum</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-		</div>
+		<h1>Experience</h1>
+		<div class="flex-container">
+            <div>
+                <h2>President & CEO</h2>
+                <h4>Yahoo!</h4>
+                    <p><img src="calendar.png" class="icon2">July 2012 - Ongoing</p>
+                    <p><img src="pin.png" class="icon2">Sunnyvale, CA</p>
+            </div>
+            <div>
+            <h2>Vice President of Location & Local Service</h2>
+                <h4>Google</h4>
+                    <p><img src="calendar.png" class="icon2">Oct 2010 - July 2012</p>
+                    <p><img src="pin.png" class="icon2">Palo Alto, CA</p>
+            </div>
+            <div>
+                <h2>Vice President of Search Products & UX</h2>
+                <h4>Google</h4>
+                    <p><img src="calendar.png" class="icon2">2005 - 2010</p>
+                    <p><img src="pin.png" class="icon2">Palo Alto, CA</p>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div>
+                <h2>Product Manager & Technical UI Lead</h2>
+                <h4>Google</h4>
+                    <p><img src="calendar.png" class="icon2">Oct 2001 - July 2005</p>
+                    <p><img src="pin.png" class="icon2">Sunnyvale, CA</p>	
+            </div>
+            <div>
+                <h2>Product Engineer</h2>
+                <h4>Google</h4>
+                    <p><img src="calendar.png" class="icon2">June 1999 - 2001</p>
+                    <p><img src="pin.png" class="icon2">Palo Alto, CA</p>
+            </div>
+        </div>
 	</div>
 
-	<div class="footer">
-		<h3>footer</h3>
-	</div>
+	<footer>
+		<copyright>copyright 2020</copyright>
+		<br/>
+		<br/>
+		<a href="www.twitter.com"><img src="twitter.png" class="icon"></a>
+		<a href="www.facebook.com"><img src="facebook.png" class="icon"></a>
+		<a href="www.linkedin.com"><img src="linkedin.png" class="icon"></a>
+		<a href="www.instagram.com"><img src="instagram.png" class="icon"></a>
+	</footer>
 
 	<script>
 		function dark(){
