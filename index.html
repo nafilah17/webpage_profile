@@ -10,32 +10,36 @@
     
     body {
         font-family: Montserrat;
+		background-color: #edeef5;
     }
+
+	/*dark mode*/
+	.dark-mode {
+		background-color: #222330;
+		color: #efeef5;
+		}
     header {
-        background-color: #f5f5ff;
+        
         padding: 60px;
         text-align: center;
         }
 
     side {
-        background-color: #f5f5ff;
+        
         padding: 20px;
         flex: 30%;
         text-align: right;
     }
 
     main {
-        background-color: #f5f5ff;
+        
         padding: 20px;
         flex: 70%;
         
     }
 
     .navbar {
-        background-color: #f5f5ff;
         display: flex;
-        
-        
     }
 
     .navbar a {
@@ -50,10 +54,8 @@
     }
 
     footer {
-        background-color: #f5f5ff;
         padding: 30px;
         text-align: center;
-        
     }
 
 
@@ -63,7 +65,7 @@
     }
 
     .flex-container > div {
-        background-color: #f5f5ff;
+        padding: 30px;
         width: 350px;
         margin: 10px;
         text-align: center;
@@ -73,7 +75,7 @@
     }
 
     .hobby {
-        background-color: #f5f5ff;
+        
         text-align: center;
         
     }
@@ -84,13 +86,13 @@
 	}
 
     .skill {
-        background-color: #f5f5ff;
+        
         text-align: center;
         
     }
 
     .experience {
-        background-color: #f5f5ff;
+        
         text-align: center;
         
     }
@@ -118,6 +120,7 @@
 			<p><img src="at.png" class="icon2">mmayer@yahoo-inc.com</p>
 			<p><img src="link.png" class="icon2">http://marissamayr.tumblr.com</p>
 			<p><img src="pin.png" class="icon2">Sunnyvale,CA</p>			
+		
 		</side>
 		<main>
 			<div class="navbar">
@@ -214,9 +217,9 @@
 	</footer>
 
 	<script>
-		function dark(){
+		function dark() {
 			var element = document.body;
-			element.classlight.toggle("darkmode");
+			element.classList.toggle("dark-mode");
 		}
 	</script>
 </body>
