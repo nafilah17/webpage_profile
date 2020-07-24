@@ -9,7 +9,7 @@
     }
     
     body {
-        font-family: Calibri;
+        font-family: Arial, Helvetica, sans-serif;
 		background-color: #edeef5;
     }
 
@@ -51,7 +51,6 @@
         padding: 15px;
         width: 100%;
         justify-content: space-evenly;
-        
     }
 
     .navbar a {
@@ -74,14 +73,13 @@
 
     .card:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        }
+    }
 
     footer {
         padding: 30px;
         text-align: center;
         font-size:15px ;
     }
-
 
     .flex-container {
         display: flex;
@@ -102,12 +100,49 @@
         text-align: center;
     }
 
+    /* Style the tab */
+    .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 700px;
+    text-align: center;
+
+    }
+
+    .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    justify-content: center;
+    }
+
+    .tab button:hover {
+    background-color: #ddd;
+    }
+
+    .tab button.active {
+    background-color: #ccc;
+    }
+
+    .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    width: 700px;
+    }
 
 	/* icon */
     .icon2 {
         width: 10px;
-	
     }
+
     .icon {
         width: 20px;
 		margin: 10px;
@@ -201,42 +236,50 @@
 		</div>
 	</section>
 
-	<section class="experience" id="experience">
+	<section class="experience" id="experience"></section>
 		<h1>Experience</h1>
-		<div class="flex-container">
-            <div class="card">
-                <h2>President & CEO</h2>
-                <h4>Yahoo!</h4>
-                    <p><img src="image/calendar.png" class="icon2">   July 2012 - Ongoing</p>
-                    <p><img src="image/pin.png" class="icon2">   Sunnyvale, CA</p>
-            </div>
-            <div class="card">
-            <h2>Vice President of Location & Local Service</h2>
-                <h4>Google</h4>
-                    <p><img src="image/calendar.png" class="icon2">   Oct 2010 - July 2012</p>
-                    <p><img src="image/pin.png" class="icon2">   Palo Alto, CA</p>
-            </div>
-            <div class="card">
-                <h2>Vice President of Search Products & UX</h2>
-                <h4>Google</h4>
-                    <p><img src="image/calendar.png" class="icon2">   2005 - 2010</p>
-                    <p><img src="image/pin.png" class="icon2">   Palo Alto, CA</p>
-            </div>
+		<div class="tab">
+            <button class="tablinks" onclick="openExperience(event, 'Experience1')">Experience 1</button>
+            <button class="tablinks" onclick="openExperience(event, 'Experience2')">Experience 2</button>
+            <button class="tablinks" onclick="openExperience(event, 'Experience3')">Experience 3</button>
+            <button class="tablinks" onclick="openExperience(event, 'Experience4')">Experience 4</button>
+            <button class="tablinks" onclick="openExperience(event, 'Experience5')">Experience 5</button>
         </div>
-        <div class="flex-container">
-            <div class="card">
-                <h2>Product Manager & Technical UI Lead</h2>
-                <h4>Google</h4>
-                    <p><img src="image/calendar.png" class="icon2">   Oct 2001 - July 2005</p>
-                    <p><img src="image/pin.png" class="icon2">   Sunnyvale, CA</p>	
-            </div>
-            <div class="card"> 
-                <h2>Product Engineer</h2>
-                <h4>Google</h4>
-                    <p><img src="image/calendar.png" class="icon2">   June 1999 - 2001</p>
-                    <p><img src="image/pin.png" class="icon2">   Palo Alto, CA</p>
-            </div>
+        
+        <div id="Experience1" class="tabcontent">
+        <h2>President & CEO</h2>
+            <h4>Yahoo!</h4>
+                <p><img src="image/calendar.png" class="icon2">July 2012 - Ongoing</p>
+                <p><img src="image/pin.png" class="icon2">Sunnyvale, CA</p>
         </div>
+
+        <div id="Experience2" class="tabcontent">
+        <h2>Vice President of Location & Local Service</h2>
+            <h4>Google</h4>
+                <p><img src="image/calendar.png" class="icon2">Oct 2010 - July 2012</p>
+                <p><img src="image/pin.png" class="icon2">Palo Alto, CA</p>
+        </div>
+
+        <div id="Experience3" class="tabcontent">
+        <h2>Vice President of Search Products & UX</h2>
+            <h4>Google</h4>
+                <p><img src="image/calendar.png" class="icon2">2005 - 2010</p>
+                <p><img src="image/pin.png" class="icon2">Palo Alto, CA</p>
+        </div>
+
+        <div id="Experience4" class="tabcontent">
+            <h2>Product Manager & Technical UI Lead</h2>
+            <h4>Google</h4>
+                <p><img src="image/calendar.png" class="icon2">Oct 2001 - July 2005</p>
+                <p><img src="image/pin.png" class="icon2">Sunnyvale, CA</p>	
+        </div>
+
+        <div id="Experience5" class="tabcontent">
+            <h2>Product Engineer</h2>
+            <h4>Google</h4>
+                <p><img src="image/calendar.png" class="icon2">June 1999 - 2001</p>
+                <p><img src="image/pin.png" class="icon2">Palo Alto, CA</p>
+        </div>        
 	</section>
 
 	<footer>
@@ -256,6 +299,24 @@
 			var element = document.body;
 			element.classList.toggle("dark-mode");
 		}
-	</script>
+    </script>
+    
+    <!-- navigation tab in experience -->
+    <script>
+        function openExperience(evt, experienceName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(experienceName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+    </script>
+
 </body>
 </html>
