@@ -9,6 +9,7 @@
     * {
         box-sizing: border-box;
     }
+
     body {
         font-family: Montserrat;
         background-color: #edeef5;
@@ -18,6 +19,7 @@
     .dark-mode {
         background-color: #222330;
         color: #efeef5;
+    
     }
 
     header {
@@ -25,10 +27,13 @@
         font-family: Montserrat;
         text-align: center;
         font-size: 30px;
-        margin-top:70px;
+        margin-top: 70px;
         background-image: url(image/header.jfif);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
         color: black;
-           }
+    }
 
     side {
         padding: 20px;
@@ -56,7 +61,7 @@
     }
 
     .navbar a {
-        color: black ;
+        color: black;
         padding: 10px;
         text-align: center;
     }
@@ -71,7 +76,7 @@
         width: 40%;
         padding: 16px;
         border: 1px #333;
-        background-image: url(image/card-background.jfif);
+        background-image: url(image/card-background2.jfif);
     }
 
     .card:hover {
@@ -102,7 +107,9 @@
     .hobby,
     .skill,
     .experience {
+        padding-top: 100px;
         text-align: center;
+        /* border: 1px solid #ccc; */
     }
 
     /* Style the tab */
@@ -144,17 +151,19 @@
         margin: auto;
     }
 
-    /* .tabcontent-active {
+    /* 
+    .tabcontent-active {
         padding: 6px 12px;
         border: 1px solid #ccc;
         border-top: none;
         width: 800px;
         margin: auto;
+        position: relative;
     } */
 
     /* icon */
     .icon2 {
-        width: 10px;
+        width: 15px;
     }
 
     .icon {
@@ -168,7 +177,6 @@
     }
 
     h1 {
-        color: black;
         text-align: center;
     }
 
@@ -179,13 +187,11 @@
 
     li {
         text-align: left;
-        padding: 2px;
+        padding: 5px;
     }
 </style>
 
 <body>
-
-
     <div class="navbar">
         <a href="#profile">PROFILE</a>
         <a href="#skill">SKILL</a>
@@ -200,9 +206,10 @@
         <div class="flex-container">
             <side>
                 <img src="image/profile.jpg" style="width: 150px">
-                <p><a href ="mmayer@yahoo-inc.com">mmayer@yahoo-inc.com</a> <img src="image/at.png" class="icon2"></p>
-                <p><a href ="http://marissamayr.tumblr.com">http://marissamayr.tumblr.com</a> <img src="image/link.png" class="icon2"></p>
-                <p>Sunnyvale,CA <img src="image/pin.png" class="icon2"></p>
+                <p><a href="mailto:mmayer@yahoo-inc.com">mmayer@yahoo-inc.com</a> <img src="image/at.svg" class="icon2"></p>
+                <p><a href="http://marissamayr.tumblr.com">http://marissamayr.tumblr.com</a> <img src="image/link.svg"
+                        class="icon2"></p>
+                <p>Sunnyvale,CA <img src="image/pin.svg" class="icon2"></p>
 
             </side>
             <main>
@@ -211,32 +218,16 @@
                 <p><i>"If you don't have any shadows, you're not standing in the light</i></p>
                 <h4>Hobby</h4>
                 <ul>
-                    <li>Watching Korean Drama</li>
-                    <li>Watching Run BTS</li>
-                    <li>German</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
                 </ul>
             </main>
         </div>
     </section>
-
-    <!-- <section class="hobby" id="hobby">
-		<h1>Hobby</h1>
-		<div class="flex-container">
-			<div>
-				<h2>Lorem Ipsum</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-			<div>
-				<h2>Lorem Ipsum</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-			<div>
-				<h2>Lorem Ipsum</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-		</div>
-	</section> -->
-
+    <hr />
     <section class="skill" id="skill">
         <h1>Skill</h1>
         <div class="flex-container">
@@ -261,7 +252,7 @@
             </div>
         </div>
     </section>
-
+    <hr />
     <!-- navigation tab -->
     <section class="experience" id="experience">
         <h1>Experience</h1>
@@ -276,62 +267,63 @@
         <div id="Experience1" class="tabcontent">
             <h2>President & CEO</h2>
             <h4>Yahoo!</h4>
-            <p><img src="image/calendar.png" class="icon2"> July 2012 - Ongoing</p>
-            <p><img src="image/pin.png" class="icon2"> Sunnyvale, CA</p>
+            <p><img src="image/calendar.svg" class="icon2"> July 2012 - Ongoing</p>
+            <p><img src="image/pin.svg" class="icon2"> Sunnyvale, CA</p>
         </div>
 
         <div id="Experience2" class="tabcontent">
             <h2>Vice President of Location & Local Service</h2>
             <h4>Google</h4>
-            <p><img src="image/calendar.png" class="icon2"> Oct 2010 - July 2012</p>
-            <p><img src="image/pin.png" class="icon2"> Palo Alto, CA</p>
+            <p><img src="image/calendar.svg" class="icon2"> Oct 2010 - July 2012</p>
+            <p><img src="image/pin.svg" class="icon2"> Palo Alto, CA</p>
         </div>
 
         <div id="Experience3" class="tabcontent">
             <h2>Vice President of Search Products & UX</h2>
             <h4>Google</h4>
-            <p><img src="image/calendar.png" class="icon2"> 2005 - 2010</p>
-            <p><img src="image/pin.png" class="icon2"> Palo Alto, CA</p>
+            <p><img src="image/calendar.svg" class="icon2"> 2005 - 2010</p>
+            <p><img src="image/pin.svg" class="icon2"> Palo Alto, CA</p>
         </div>
 
         <div id="Experience4" class="tabcontent">
             <h2>Product Manager & Technical UI Lead</h2>
             <h4>Google</h4>
-            <p><img src="image/calendar.png" class="icon2"> Oct 2001 - July 2005</p>
-            <p><img src="image/pin.png" class="icon2"> Sunnyvale, CA</p>
+            <p><img src="image/calendar.svg" class="icon2"> Oct 2001 - July 2005</p>
+            <p><img src="image/pin.svg" class="icon2"> Sunnyvale, CA</p>
         </div>
 
         <div id="Experience5" class="tabcontent">
             <h2>Product Engineer</h2>
             <h4>Google</h4>
-            <p><img src="image/calendar.png" class="icon2"> June 1999 - 2001</p>
-            <p><img src="image/pin.png" class="icon2"> Palo Alto, CA</p>
+            <p><img src="image/calendar.svg" class="icon2"> June 1999 - 2001</p>
+            <p><img src="image/pin.svg" class="icon2"> Palo Alto, CA</p>
         </div>
     </section>
 
     <footer>
-        <p> <img src="image/copyright.png" class="icon"></p>
+        <p>&#169; July 2020</p>
         <br />
         <br />
         <p>contact me on :</p>
-        <a href="www.twitter.com"> <img src="image/twitter.png" class="icon"></a>
-        <a href="www.facebook.com"> <img src="image/facebook.png" class="icon"></a>
-        <a href="www.linkedin.com"> <img src="image/linkedin.png" class="icon"></a>
-        <a href="www.instagram.com"> <img src="image/instagram.png" class="icon"></a>
+        <a href="mailto:mmayer@yahoo-inc.com"><img src="image/at.svg" class="icon2"></a>
+        <a href="http://marissamayr.tumblr.com"><img src="image/link.svg" class="icon2"></a> 
+        
+        <!-- <a href="www.twitter.com"> <img src="image/twitter.svg" class="icon"></a>
+        <a href="www.facebook.com"> <img src="image/facebook.svg" class="icon"></a>
+        <a href="www.linkedin.com"> <img src="image/linkedin.svg" class="icon"></a>
+        <a href="www.instagram.com"> <img src="image/instagram.svg" class="icon"></a>  -->
     </footer>
 
-    <!-- dark mode -->
     <script>
+        // <!-- dark mode -->
         function dark() {
-            var element = document.body;
+            const element = document.body;
             element.classList.toggle("dark-mode");
         }
-    </script>
 
-    <!-- navigation tab in experience -->
-    <script>
+        // <!-- navigation tab in experience -->
         function openExperience(evt, experienceName) {
-            var i, tabcontent, tablinks;
+            let i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
