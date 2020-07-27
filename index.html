@@ -24,7 +24,7 @@
 
     header {
         padding: 70px;
-        font-family: Montserrat;
+        /* font-family: Montserrat; */
         text-align: center;
         font-size: 30px;
         margin-top: 70px;
@@ -112,6 +112,12 @@
         /* border: 1px solid #ccc; */
     }
 
+    @media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+
     /* Style the tab */
     .tab {
         overflow: hidden;
@@ -130,8 +136,8 @@
         padding: 14px 16px;
         transition: 0.3s;
         font-size: 17px;
-        font-family: Montserrat;
-        color: darkgray;
+        /* font-family: Montserrat; */
+        color: #ccc;
     }
 
     .tab button:hover {
@@ -182,8 +188,9 @@
     }
 
     a {
-        font-family: Montserrat;
+        /* font-family: Montserrat; */
         text-decoration: none;
+        color: black;
     }
 
     li {
@@ -207,7 +214,7 @@
         <div class="flex-container">
             <side>
                 <img src="image/profile.jpg" style="width: 150px">
-                <p><a href="mailto:mmayer@yahoo-inc.com">mmayer@yahoo-inc.com</a> <img src="image/mail.svg" class="icon2"></p>
+                <p><a href="mailto:mmayer@yahoo-inc.com">mmayer@yahoo-inc.com</a> <img src="image/mail.svg" class="icon2"></br></p>
                 <p><a href="http://marissamayr.tumblr.com">http://marissamayr.tumblr.com</a> <img src="image/tumblr.svg"
                         class="icon2"></p>
                 <p>Sunnyvale,CA <img src="image/location.svg" class="icon2"></p>
@@ -320,8 +327,12 @@
         function dark() {
             const element = document.body;
             element.classList.toggle("dark-mode");
+            document.getElementById(dark-mode).classList.add('tablinks');
+            document.getElementById(dark-mode).classList.remove('dark-mode');
         }
+    </script>
 
+    <script>
         // <!-- navigation tab in experience -->
         function openExperience(evt, experienceName) {
             let i, tabcontent, tablinks;
@@ -335,6 +346,8 @@
             }
             document.getElementById(experienceName).style.display = "block";
             evt.currentTarget.className += " active";
+
+            
         }
     </script>
 
