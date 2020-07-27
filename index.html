@@ -12,7 +12,7 @@
     }
 
     body {
-		font-family: 'Montserrat', sans-serif;        
+		font-family: 'Montserrat', sans-serif;
 		background-color: #edeef5;
     }
 
@@ -114,7 +114,7 @@
     }
 
     @media screen and (max-width: 700px) {
-  .row, .navbar {   
+  .row, .navbar {
     flex-direction: column;
   }
 }
@@ -138,6 +138,10 @@
         transition: 0.3s;
         font-size: 17px;
         font-family: Montserrat;
+        color: black;
+    }
+
+    .dark-mode .tab button {
         color: #ccc;
     }
 
@@ -158,7 +162,7 @@
         margin: auto;
     }
 
-    /* 
+    /*
     .tabcontent-active {
         padding: 6px 12px;
         border: 1px solid #ccc;
@@ -315,8 +319,8 @@
         <br />
         <p>contact me on :</p>
         <a href="mailto:mmayer@yahoo-inc.com"><img src="image/mail.svg" class="icon2"></a>
-        <a href="http://marissamayr.tumblr.com"><img src="image/tumblr.svg" class="icon2"></a> 
-        
+        <a href="http://marissamayr.tumblr.com"><img src="image/tumblr.svg" class="icon2"></a>
+
         <!-- <a href="www.twitter.com"> <img src="image/twitter.svg" class="icon"></a>
         <a href="www.facebook.com"> <img src="image/facebook.svg" class="icon"></a>
         <a href="www.linkedin.com"> <img src="image/linkedin.svg" class="icon"></a>
@@ -328,8 +332,6 @@
         function dark() {
             const element = document.body;
             element.classList.toggle('dark-mode');
-            document.getElementById('dark-mode').classList.add('tablinks');
-            document.getElementById('dark-mode').classList.remove('dark-mode');
         }
     </script>
 
@@ -348,7 +350,7 @@
             document.getElementById(experienceName).style.display = "block";
             evt.currentTarget.className += " active";
 
-            
+
         }
     </script>
 
