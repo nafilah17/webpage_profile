@@ -1,359 +1,338 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Hallo World</title>
+        <link rel="icon" href="image/letter-m.png" type="image/gif" sizes="16x16">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-<head>
-    <title>Hallo World</title>
-	<link rel="icon" href="image/letter-m.png" type="image/gif" sizes="16x16">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
-</head>
-<style>
-    * {
-        box-sizing: border-box;
-    }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #edeef5;
+        }
 
-    body {
-		font-family: 'Montserrat', sans-serif;
-		background-color: #edeef5;
-    }
+        main {
+            padding: 20px;
+            flex: 70%;
+        }
 
-    /*dark mode*/
-    .dark-mode {
-        background-color: #222330;
-        color: #efeef5;
+        header {
+            padding: 70px;
+            /* font-family: Montserrat; */
+            text-align: center;
+            font-size: 30px;
+            margin-top: 70px;
+            background-image: url(image/header.jfif);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            color: black;
+        }
 
-    }
+        footer {
+            padding: 30px;
+            text-align: center;
+            font-size: 15px;
+        }
 
-    header {
-        padding: 70px;
-        /* font-family: Montserrat; */
-        text-align: center;
-        font-size: 30px;
-        margin-top: 70px;
-        background-image: url(image/header.jfif);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-        color: black;
-    }
+        h1 {
+            text-align: center;
+        }
 
-    side {
-        padding: 20px;
-        flex: 30%;
-        text-align: right;
-    }
+        h3 {
+            color: #4991fc;
+        }
 
-    main {
-        padding: 20px;
-        flex: 70%;
-    }
+        a {
+            text-decoration: none;
+            color: black;
+        }
 
-    .navbar {
-        display: flex;
-        overflow: hidden;
-        background-color: #edeef5;
-        position: fixed;
-        top: 0;
-        padding: 15px;
-        width: 100%;
-        justify-content: space-around;
-        font-size: 15px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        transition: 0.3s;
-    }
+        li {
+            text-align: left;
+            padding: 5px;
+        }
 
-    .navbar a {
-        color: black;
-        padding: 10px;
-        text-align: center;
-    }
+        side {
+            padding: 20px;
+            flex: 30%;
+            text-align: right;
+        }
 
-    .navbar a:hover {
-        color: #4991fc;
-    }
+        .navbar {
+            display: flex;
+            overflow: hidden;
+            background-color: #edeef5;
+            position: fixed;
+            top: 0;
+            padding: 15px;
+            width: 100%;
+            justify-content: space-around;
+            font-size: 15px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
 
-    .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        transition: 0.3s;
-        width: 40%;
-        padding: 16px;
-        border: 1px #333;
-        background-image: url(image/card-background2.jfif);
-    }
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 40%;
+            padding: 16px;
+            border: 1px #333;
+            background-image: url(image/card-background2.jfif);
+        }
 
-    .card:hover {
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    }
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
 
-    footer {
-        padding: 30px;
-        text-align: center;
-        font-size: 15px;
-    }
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 100px;
+        }
 
-    .flex-container {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 100px;
-    }
+        .flex-container > div {
+            padding: 30px;
+            width: 350px;
+            margin: 10px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 15px;
+        }
 
-    .flex-container>div {
-        padding: 30px;
-        width: 350px;
-        margin: 10px;
-        text-align: center;
-        line-height: 30px;
-        font-size: 15px;
-    }
+        .skill,
+        .experience {
+            padding-top: 100px;
+            text-align: center;
+        }
 
-    .hobby,
-    .skill,
-    .experience {
-        padding-top: 100px;
-        text-align: center;
-        /* border: 1px solid #ccc; */
-    }
+        @media screen and (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
+            }
+        }
 
-    @media screen and (max-width: 700px) {
-  .row, .navbar {
-    flex-direction: column;
-  }
-}
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            width: 800px;
+            text-align: center;
+            margin: auto;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
 
-    /* Style the tab */
-    .tab {
-        overflow: hidden;
-        width: 800px;
-        text-align: center;
-        margin: auto;
-        padding: 15px;
-        border: 1px solid #ccc;
-    }
+        .tab button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            color: black;
+        }
 
-    .tab button {
-        background-color: inherit;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 14px 16px;
-        transition: 0.3s;
-        font-size: 17px;
-        font-family: Montserrat;
-        color: black;
-    }
 
-    .dark-mode .tab button {
-        color: #ccc;
-    }
+        .tab button:hover {
+            color: #4991fc;
+        }
 
-    .tab button:hover {
-        color: #4991fc;
-    }
+        .tab button.active {
+            border: 1px solid #ccc;
+        }
 
-    .tab button.active {
-        border: 1px solid #ccc;
-    }
+        .tab-content {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            width: 800px;
+            margin: auto;
+        }
 
-    .tabcontent {
-        display: none;
-        padding: 6px 12px;
-        border: 1px solid #ccc;
-        border-top: none;
-        width: 800px;
-        margin: auto;
-    }
+        .icon2 {
+            width: 15px;
+            stroke: currentColor;
+        }
 
-    /*
-    .tabcontent-active {
-        padding: 6px 12px;
-        border: 1px solid #ccc;
-        border-top: none;
-        width: 800px;
-        margin: auto;
-        position: relative;
-    } */
+        .icon {
+            width: 20px;
+            margin: 10px;
+        }
 
-    /* icon */
-    .icon2 {
-        width: 15px;
-        stroke: currentColor;
-    }
 
-    .icon {
-        width: 20px;
-        margin: 10px;
-    }
+        .dark-mode a {
+            color: #ccc;
+        }
 
-    /* text */
-    h3 {
-        color: #4991fc;
-    }
 
-    h1 {
-        text-align: center;
-    }
+        .dark-mode {
+            background-color: #222330;
+            color: #efeef5;
 
-    a {
-        /* font-family: Montserrat; */
-        text-decoration: none;
-        color: black;
-    }
+        }
 
-    li {
-        text-align: left;
-        padding: 5px;
-    }
-</style>
+        .dark-mode .tab button {
+            color: #ccc;
+        }
 
-<body>
-    <div class="navbar">
-        <a href="#profile">PROFILE</a>
-        <a href="#skill">SKILL</a>
-        <a href="#experience">EXPERIENCE</a>
-        <img src="image/dark-mode.png" class="icon" onclick="dark()">
-    </div>
-    <header>
-        <h1>Welcome to My Website</b></h1>
-    </header>
+        .navbar a {
+            color: black;
+            padding: 10px;
+            text-align: center;
+        }
 
-    <section class="profile" id="profile">
-        <div class="flex-container">
-            <side>
-                <img src="image/profile.jpg" style="width: 150px">
-                <p><a href="mailto:mmayer@yahoo-inc.com">mmayer@yahoo-inc.com</a> <img src="image/mail.svg" class="icon2"></br></p>
-                <p><a href="http://marissamayr.tumblr.com">http://marissamayr.tumblr.com</a> <img src="image/tumblr.svg"
-                        class="icon2"></p>
-                <p>Sunnyvale,CA <img src="image/location.svg" class="icon2"></p>
-
-            </side>
-            <main>
-                <h2>Marissa Mayer</h2>
-                <h4>Description About me :</h4>
-                <p><i>"If you don't have any shadows, you're not standing in the light</i></p>
-                <h4>Hobby</h4>
-                <ul>
-                    <li>Lorem Ipsum</li>
-                    <li>Lorem Ipsum</li>
-                    <li>Lorem Ipsum</li>
-                    <li>Lorem Ipsum</li>
-                    <li>Lorem Ipsum</li>
-                </ul>
-            </main>
+        .navbar a:hover {
+            color: #4991fc;
+        }
+    </style>
+    <body>
+        <div class="navbar">
+            <a href="#profile">PROFILE</a>
+            <a href="#skill">SKILL</a>
+            <a href="#experience">EXPERIENCE</a>
+            <img src="image/dark-mode.png" class="icon" onclick="dark()">
         </div>
-    </section>
-    <hr />
-    <section class="skill" id="skill">
-        <h1>Skill</h1>
-        <div class="flex-container">
-            <div class="card">
-                <h2>Languages</h2>
-                <ul>
-                    <li>English</li>
-                    <li>Spanish</li>
-                    <li>German</li>
-                </ul>
+        <header>
+            <h1>Welcome to My Website</b></h1>
+        </header>
+
+        <section class="profile" id="profile">
+            <div class="flex-container">
+                <side>
+                    <img src="image/profile.jpg" style="width: 150px">
+                    <p><a href="mailto:mmayer@yahoo-inc.com">mmayer@yahoo-inc.com</a> <img src="image/mail.svg"
+                                                                                           class="icon2"></br></p>
+                    <p><a href="http://marissamayr.tumblr.com">http://marissamayr.tumblr.com</a> <img src="image/tumblr.svg"
+                                                                                                      class="icon2"></p>
+                    <p>Sunnyvale,CA <img src="image/location.svg" class="icon2"></p>
+
+                </side>
+                <main>
+                    <h2>Marissa Mayer</h2>
+                    <h4>Description About me :</h4>
+                    <p><i>"If you don't have any shadows, you're not standing in the light</i></p>
+                    <h4>Hobby</h4>
+                    <ul>
+                        <li>Lorem Ipsum</li>
+                        <li>Lorem Ipsum</li>
+                        <li>Lorem Ipsum</li>
+                        <li>Lorem Ipsum</li>
+                        <li>Lorem Ipsum</li>
+                    </ul>
+                </main>
             </div>
-            <div class="card">
-                <h2>Strengths</h2>
-                <ul>
-                    <li>Hardworking</li>
-                    <li>Persuasive</li>
-                    <li>Motivator & Leader</li>
-                    <li>User Experience</li>
-                    <li>Mobile Devices & Applications</li>
-                    <li>Product Management & Marketing</li>
-                </ul>
+        </section>
+        <hr/>
+        <section class="skill" id="skill">
+            <h1>Skill</h1>
+            <div class="flex-container">
+                <div class="card">
+                    <h2>Languages</h2>
+                    <ul>
+                        <li>English</li>
+                        <li>Spanish</li>
+                        <li>German</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h2>Strengths</h2>
+                    <ul>
+                        <li>Hardworking</li>
+                        <li>Persuasive</li>
+                        <li>Motivator & Leader</li>
+                        <li>User Experience</li>
+                        <li>Mobile Devices & Applications</li>
+                        <li>Product Management & Marketing</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
-    <hr />
-    <!-- navigation tab -->
-    <section class="experience" id="experience">
-        <h1>Experience</h1>
-        <div class="tab">
-            <button class="tablinks" onclick="openExperience(event, 'Experience1')">Experience 1</button>
-            <button class="tablinks" onclick="openExperience(event, 'Experience2')">Experience 2</button>
-            <button class="tablinks" onclick="openExperience(event, 'Experience3')">Experience 3</button>
-            <button class="tablinks" onclick="openExperience(event, 'Experience4')">Experience 4</button>
-            <button class="tablinks" onclick="openExperience(event, 'Experience5')">Experience 5</button>
-        </div>
+        </section>
+        <hr/>
+        <!-- navigation tab -->
+        <section class="experience" id="experience">
+            <h1>Experience</h1>
+            <div class="tab">
+                <button class="tab-link" id="default-tab" data-tab="Experience1" onclick="openExperience(this)">Experience 1</button>
+                <button class="tab-link" data-tab="Experience2" onclick="openExperience(this)">Experience 2</button>
+                <button class="tab-link" data-tab="Experience3" onclick="openExperience(this)">Experience 3</button>
+                <button class="tab-link" data-tab="Experience4" onclick="openExperience(this)">Experience 4</button>
+                <button class="tab-link" data-tab="Experience5" onclick="openExperience(this)">Experience 5</button>
+            </div>
 
-        <div id="Experience1" class="tabcontent">
-            <h2>President & CEO</h2>
-            <h4>Yahoo!</h4>
-            <p>July 2012 - Ongoing</p>
-            <p>Sunnyvale, CA</p>
-        </div>
+            <div id="Experience1" class="tab-content">
+                <h2>President & CEO</h2>
+                <h4>Yahoo!</h4>
+                <p>July 2012 - Ongoing</p>
+                <p>Sunnyvale, CA</p>
+            </div>
 
-        <div id="Experience2" class="tabcontent">
-            <h2>Vice President of Location & Local Service</h2>
-            <h4>Google</h4>
-            <p>Oct 2010 - July 2012</p>
-            <p>Palo Alto, CA</p>
-        </div>
+            <div id="Experience2" class="tab-content">
+                <h2>Vice President of Location & Local Service</h2>
+                <h4>Google</h4>
+                <p>Oct 2010 - July 2012</p>
+                <p>Palo Alto, CA</p>
+            </div>
 
-        <div id="Experience3" class="tabcontent">
-            <h2>Vice President of Search Products & UX</h2>
-            <h4>Google</h4>
-            <p>2005 - 2010</p>
-            <p>Palo Alto, CA</p>
-        </div>
+            <div id="Experience3" class="tab-content">
+                <h2>Vice President of Search Products & UX</h2>
+                <h4>Google</h4>
+                <p>2005 - 2010</p>
+                <p>Palo Alto, CA</p>
+            </div>
 
-        <div id="Experience4" class="tabcontent">
-            <h2>Product Manager & Technical UI Lead</h2>
-            <h4>Google</h4>
-            <p>Oct 2001 - July 2005</p>
-            <p>Sunnyvale, CA</p>
-        </div>
+            <div id="Experience4" class="tab-content">
+                <h2>Product Manager & Technical UI Lead</h2>
+                <h4>Google</h4>
+                <p>Oct 2001 - July 2005</p>
+                <p>Sunnyvale, CA</p>
+            </div>
 
-        <div id="Experience5" class="tabcontent">
-            <h2>Product Engineer</h2>
-            <h4>Google</h4>
-            <p>June 1999 - 2001</p>
-            <p>Palo Alto, CA</p>
-        </div>
-    </section>
+            <div id="Experience5" class="tab-content">
+                <h2>Product Engineer</h2>
+                <h4>Google</h4>
+                <p>June 1999 - 2001</p>
+                <p>Palo Alto, CA</p>
+            </div>
+        </section>
 
-    <footer>
-        <p>&#169; July 2020</p>
-        <br />
-        <br />
-        <p>contact me on :</p>
-        <a href="mailto:mmayer@yahoo-inc.com"><img src="image/mail.svg" class="icon2"></a>
-        <a href="http://marissamayr.tumblr.com"><img src="image/tumblr.svg" class="icon2"></a>
+        <footer>
+            <p>&#169; July 2020</p>
+            <br/>
+            <br/>
+            <p>contact me on :</p>
+            <a href="mailto:mmayer@yahoo-inc.com"><img src="image/mail.svg" class="icon2"></a>
+            <a href="http://marissamayr.tumblr.com"><img src="image/tumblr.svg" class="icon2"></a>
+        </footer>
 
-        <!-- <a href="www.twitter.com"> <img src="image/twitter.svg" class="icon"></a>
-        <a href="www.facebook.com"> <img src="image/facebook.svg" class="icon"></a>
-        <a href="www.linkedin.com"> <img src="image/linkedin.svg" class="icon"></a>
-        <a href="www.instagram.com"> <img src="image/instagram.svg" class="icon"></a>  -->
-    </footer>
-
-    <script>
-        // <!-- dark mode -->
-        function dark() {
+        <script>
+          // <!-- dark mode -->
+          function dark() {
             const element = document.body;
             element.classList.toggle('dark-mode');
-        }
-    </script>
+          }
+        </script>
 
-    <script>
-        // <!-- navigation tab in experience -->
-        function openExperience(evt, experienceName) {
-            let i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
+        <script>
+          function openExperience(e) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            const tabLinks = document.getElementsByClassName("tab-link");
+            // reset tab state
+            for (let i = 0; i < tabLinks.length; i++) {
+              tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+              tabContents[i].style.display = "none";
             }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(experienceName).style.display = "block";
-            evt.currentTarget.className += " active";
-
-
-        }
-    </script>
-
-</body>
-
+            // active tab
+            e.className += " active";
+            document.getElementById(e.dataset.tab).style.display = "block";
+          }
+          openExperience(document.getElementById('default-tab'));
+        </script>
+    </body>
 </html>
