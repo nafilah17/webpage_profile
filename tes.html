@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Haloo</title>
+</head>
+<style>
+     * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family :Montserrat;
+        background-color: #edeef5;
+        color: black;
+    }
+     
+     
+    header {
+        margin-top: 70px;
+        padding: 70px;
+        text-align: center;
+        font-size: 30px;
+        background-image: url(image/header.jfif);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        color: black;
+    }
+
+    article {
+        border: 1px solid blue;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 20px;
+        border: 1px solid blue;
+    }
+
+    sidebar {   
+        border: 1px solid blue;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .icon {
+        width: 15px;
+        stroke: currentColor;
+    }
+
+    .navbar {
+        display: flex;
+        overflow: hidden;
+        background-color: #edeef5;
+        position: fixed;
+        top: 0;
+        padding: 15px;
+        width: 100%;
+        justify-content: space-around;
+        font-size: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+    }
+
+    .navbar a {
+        color: black;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navbar a:hover {
+        color: #4991fc;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 40%;
+        padding: 16px;
+        border: 1px #333;
+        background-image: url(image/card-background2.jfif);
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    
+    .skill {
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    </style>
+<body>
+    <div class="navbar">
+        <a href="#profile">PROFILE</a>
+        <a href="#skill">SKILL</a>
+        <a href="#experience">EXPERIENCE</a>
+    </div>
+        <header>
+           Welcome to my page
+        </header>
+        <div class="container">
+            <sidebar>
+                <img src="image/profile.jpg" style="width: 150px;">
+                <p>Nama     : Marissa Mayer</p>
+                <p>Alamat   : Sunnyvale, CA</p>
+                <p>Email    : <a href="mailto:mmayer@yahoo-inc.com">mmayer@yahoo-inc.com</a></p>
+                <p>Tumblr   : <a href="http://marissamayr.tumblr.com">http://marissamayr.tumblr.com</a></p>
+            </sidebar>
+            <article>
+                <p>Deskripsi diri :</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Hobbi :</p>
+                <ul>
+                    <li>lorem ipsum</li>
+                    <li>lorem ipsum</li>
+                    <li>lorem ipsum</li>
+                </ul>
+            </article>
+        </div>
+
+        <section class="skill" id="skill">
+            <h1>Skill</h1>
+            <div class="container">
+                <div class="card">
+                    <h2>Languages</h2>
+                    <ul>
+                        <li>English</li>
+                        <li>Spanish</li>
+                        <li>German</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h2>Strengths</h2>
+                    <ul>
+                        <li>Hardworking</li>
+                        <li>Persuasive</li>
+                        <li>Motivator & Leader</li>
+                        <li>User Experience</li>
+                        <li>Mobile Devices & Applications</li>
+                        <li>Product Management & Marketing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&#169; July 2020</p>
+            <br />
+            <br />
+            <p>contact me on :</p>
+            <a href="mailto:mmayer@yahoo-inc.com"><img src="image/mail.svg" class="icon"></a>
+            <a href="http://marissamayr.tumblr.com"><img src="image/tumblr.svg" class="icon"></a> 
+        </footer>
+
+</body>
+</html>
