@@ -24,6 +24,7 @@
 
     header {
         padding: 70px;
+        /* font-family: Montserrat; */
         text-align: center;
         font-size: 30px;
         margin-top: 70px;
@@ -91,13 +92,24 @@
     .flex-container {
         display: flex;
         justify-content: center;
+        margin-bottom: 100px;
     }
 
+    .flex-container>div {
+        padding: 30px;
+        width: 350px;
+        margin: 10px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 15px;
+    }
 
+    .hobby,
     .skill,
     .experience {
         padding-top: 100px;
         text-align: center;
+        /* border: 1px solid #ccc; */
     }
 
     @media screen and (max-width: 700px) {
@@ -124,7 +136,7 @@
         padding: 14px 16px;
         transition: 0.3s;
         font-size: 17px;
-        /* font-family: Montserrat; */
+        font-family: Montserrat;
         color: #ccc;
     }
 
@@ -145,16 +157,26 @@
         margin: auto;
     }
 
+    /* 
+    .tabcontent-active {
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+        width: 800px;
+        margin: auto;
+        position: relative;
+    } */
+
     /* icon */
-    .icon {
+    .icon2 {
         width: 15px;
         stroke: currentColor;
     }
 
-    /* .icon2 {
+    .icon {
         width: 20px;
         margin: 10px;
-    } */
+    }
 
     /* text */
     h3 {
@@ -166,6 +188,7 @@
     }
 
     a {
+        /* font-family: Montserrat; */
         text-decoration: none;
         color: black;
     }
@@ -181,6 +204,7 @@
         <a href="#profile">PROFILE</a>
         <a href="#skill">SKILL</a>
         <a href="#experience">EXPERIENCE</a>
+        <img src="image/dark-mode.png" class="icon" onclick="dark()">
     </div>
     <header>
         <h1>Welcome to My Website</b></h1>
@@ -190,10 +214,10 @@
         <div class="flex-container">
             <side>
                 <img src="image/profile.jpg" style="width: 150px">
-                <p><a href="mailto:mmayer@yahoo-inc.com">mmayer@yahoo-inc.com</a> <img src="image/mail.svg" class="icon"></br></p>
+                <p><a href="mailto:mmayer@yahoo-inc.com">mmayer@yahoo-inc.com</a> <img src="image/mail.svg" class="icon2"></br></p>
                 <p><a href="http://marissamayr.tumblr.com">http://marissamayr.tumblr.com</a> <img src="image/tumblr.svg"
-                        class="icon"></p>
-                <p>Sunnyvale,CA <img src="image/location.svg" class="icon"></p>
+                        class="icon2"></p>
+                <p>Sunnyvale,CA <img src="image/location.svg" class="icon2"></p>
 
             </side>
             <main>
@@ -289,8 +313,8 @@
         <br />
         <br />
         <p>contact me on :</p>
-        <a href="mailto:mmayer@yahoo-inc.com"><img src="image/mail.svg" class="icon"></a>
-        <a href="http://marissamayr.tumblr.com"><img src="image/tumblr.svg" class="icon"></a> 
+        <a href="mailto:mmayer@yahoo-inc.com"><img src="image/mail.svg" class="icon2"></a>
+        <a href="http://marissamayr.tumblr.com"><img src="image/tumblr.svg" class="icon2"></a> 
         
         <!-- <a href="www.twitter.com"> <img src="image/twitter.svg" class="icon"></a>
         <a href="www.facebook.com"> <img src="image/facebook.svg" class="icon"></a>
